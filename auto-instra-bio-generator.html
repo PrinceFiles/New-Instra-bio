@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Auto Instra Bio Generator [Free]</title>
+  <meta name="description" content="Create professional Instagram bios automatically! Free online Insta Bio Generator tool for unique and trending bios." />
+  <meta name="keywords" content="instagram bio, bio generator, insta profile ideas, stylish bios, free bio generator, insta bio maker, cool instagram bios, best bio ideas 2025" />
+  <link rel="canonical" href="https://yourusername.github.io/auto-instra-bio-generator.html" />
+  <meta property="og:title" content="Auto Instra Bio Generator [Free]" />
+  <meta property="og:description" content="Create professional Instagram bios automatically! Free online Insta Bio Generator tool for unique and trending bios." />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <!-- Simple gradient circular favicon as data URI -->
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 120'%3E%3Cdefs%3E%3CradialGradient id='g' cx='50%25' cy='30%25' r='80%25'%3E%3Cstop offset='0%25' stop-color='%23c85cff'/%3E%3Cstop offset='100%25' stop-color='%23009cff'/%3E%3C/radialGradient%3E%3C/defs%3E%3Ccircle cx='60' cy='60' r='56' fill='url(%23g)'/%3E%3Ctext x='50%25' y='58%25' font-size='54' text-anchor='middle' font-family='Poppins, Arial' fill='white' dy='.18em'%3E✨%3C/text%3E%3C/svg%3E" />
+
+  <style>
+    :root{
+      --bg1: #f7f3ff;
+      --bg2: #e8f8ff;
+      --card: #ffffff;
+      --accent: linear-gradient(90deg,#a14bff,#2fb6ff);
+      --muted: #6b7280;
+    }
+    html,body{height:100%;margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,'Segoe UI',Roboto,'Helvetica Neue',Arial;background:linear-gradient(180deg,var(--bg1),var(--bg2));color:#0b1220;}
+    .wrap{max-width:900px;margin:28px auto;padding:18px;}
+    .inner{max-width:640px;margin:0 auto;}
+    .card{background:var(--card);border-radius:16px;padding:20px;box-shadow:0 10px 30px rgba(12,18,28,0.08);border:1px solid rgba(11,18,32,0.04);}
+    header{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:14px}
+    h1{font-size:1.5rem;margin:0}
+    p.lead{margin:6px 0 0;color:var(--muted)}
+    label{display:block;font-size:0.9rem;color:var(--muted);margin-top:12px;margin-bottom:6px}
+    input[type=text], textarea, select{width:100%;padding:12px;border-radius:10px;border:1px solid #e6e9ef;font-size:1rem;background:#fff;box-sizing:border-box}
+    textarea{min-height:96px;resize:vertical;background:#fbfdff}
+    .row{display:flex;gap:10px;flex-wrap:wrap;margin-top:12px}
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:10px 12px;border-radius:12px;border:0;background:linear-gradient(90deg,#7b4bff,#1fb8ff);color:white;font-weight:700;cursor:pointer}
+    .btn.alt{background:white;color:#0b1220;border:1px solid #e6e9ef}
+    .muted{color:var(--muted);font-size:0.95rem}
+    .output{white-space:pre-wrap;background:#fbfdff;padding:12px;border-radius:10px;border:1px solid #eef6fb;margin-top:12px;font-size:1rem}
+    footer{margin-top:18px;text-align:center;color:var(--muted);font-size:0.9rem}
+    .flex{display:flex;gap:8px;align-items:center}
+    @media(max-width:720px){.inner{padding:6px}header{flex-direction:column;align-items:flex-start}}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="inner">
+      <header>
+        <div>
+          <h1>Auto Instra Bio Generator [Free]</h1>
+          <p class="lead">Create professional Instagram bios automatically! Free online Insta Bio Generator tool for unique and trending bios.</p>
+        </div>
+        <div class="flex" style="gap:10px">
+          <button id="generateTop" class="btn">Generate</button>
+        </div>
+      </header>
+
+      <main class="card" role="main" aria-labelledby="tool-title">
+        <h2 id="tool-title" style="margin:0 0 8px 0;font-size:1.05rem">Turn short keywords into a perfect bio</h2>
+        <label for="name">Display name (optional)</label>
+        <input id="name" type="text" placeholder="Jane Doe or @janedoe" />
+
+        <label for="niche">Niche / Role</label>
+        <input id="niche" type="text" placeholder="e.g. Travel Blogger, Food Creator" />
+
+        <label for="keywords">Keywords (comma, pipe, semicolon, or spaces)</label>
+        <textarea id="keywords" placeholder="e.g. travel, food, photography"></textarea>
+
+        <div class="row">
+          <div style="flex:1;min-width:160px">
+            <label for="tone">Tone</label>
+            <select id="tone">
+              <option value="professional">Professional</option>
+              <option value="friendly">Friendly</option>
+              <option value="fun">Fun / Quirky</option>
+              <option value="concise">Concise / Short</option>
+              <option value="creative">Creative</option>
+            </select>
+          </div>
+          <div style="min-width:160px">
+            <label for="length">Max length</label>
+            <input id="length" type="range" min="50" max="220" value="140" />
+            <div class="muted" id="lengthValue">140 characters</div>
+          </div>
+        </div>
+
+        <div style="display:flex;gap:10px;margin-top:12px;align-items:center">
+          <button id="generateBtn" class="btn">Generate Bio</button>
+          <button id="resetBtn" class="btn alt">Reset</button>
+        </div>
+
+        <div style="margin-top:12px">
+          <h3 style="margin:0;font-size:0.95rem">Generated bio preview</h3>
+          <textarea id="output" class="output" readonly>Click Generate to create your bio — it will appear here.</textarea>
+          <div style="margin-top:8px" class="muted">Character count: <span id="charCount">0</span> — Instagram limit ≈ 150 chars.</div>
+        </div>
+
+        <div style="margin-top:12px;display:flex;gap:8px">
+          <button id="copyBtn" class="btn alt">Copy</button>
+          <button id="downloadBtn" class="btn alt">Download</button>
+          <button id="privacyBtn" class="btn alt">Privacy</button>
+        </div>
+      </main>
+
+      <footer>
+        © 2025 Auto Instra Bio Generator | Free Hoster
+      </footer>
+    </div>
+  </div>
+
+  <!-- Privacy modal (hidden) -->
+  <div id="privacyModal" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,0.45);align-items:center;justify-content:center;z-index:9999;">
+    <div style="background:#fff;padding:18px;border-radius:12px;max-width:520px;margin:auto;">
+      <div style="display:flex;justify-content:space-between;align-items:center">
+        <h3 style="margin:0">Privacy & Policy</h3>
+        <button onclick="closePrivacy()" style="background:none;border:0;font-size:20px;cursor:pointer">×</button>
+      </div>
+      <p style="color:#444">This tool runs locally in the browser. No data is sent to servers or stored. Generated bios remain on your device.</p>
+      <div style="text-align:right;margin-top:10px"><button onclick="closePrivacy()" class="btn alt">Close</button></div>
+    </div>
+  </div>
+
+  <script>
+    // Utility: split keywords by common separators (space, comma, pipe, semicolon) and remove empties
+    function splitKeywords(text) {
+      if (!text) return [];
+      return String(text).split(/[\s,|;]+/).map(s => s.trim()).filter(Boolean);
+    }
+
+    // Sanitize: remove control/non-printable chars, but KEEP emojis and normal punctuation
+    function sanitizeKeepEmoji(s) {
+      return s.replace(/[\u0000-\u001F\u007F-\u009F]/g, '');
+    }
+
+    // Keyword scoring (simple): used for suggestions (keeps lightweight)
+    function scoreKeywords(arr) {
+      if (!arr || arr.length === 0) return { score: 0, details: [] };
+      const details = [];
+      let raw = 0;
+      const seen = new Set();
+      arr.forEach(k => {
+        const lower = k.toLowerCase();
+        let s = 0;
+        if (lower.length <= 2) s -= 1;
+        if (lower.length >= 3 && lower.length <= 20) s += 2;
+        if (!seen.has(lower)) s += 1;
+        if (/[0-9]/.test(lower)) s -= 0.5;
+        if (/\b(blog|writer|food|travel|tech|photography|creator|influencer)\b/.test(lower)) s += 1;
+        seen.add(lower);
+        details.push({ k, s: Math.round(s * 10) / 10 });
+        raw += s;
+      });
+      const maxPossible = arr.length * 4;
+      const normalized = Math.max(0, Math.min(100, Math.round(((raw + arr.length) / (maxPossible + arr.length)) * 100)));
+      return { score: normalized, details };
+    }
+
+    // Build a bio based on inputs (keeps emojis)
+    function buildBio({ name, niche, keywords, tone }) {
+      const k = keywords || [];
+      const cap = s => s ? (s[0].toUpperCase() + s.slice(1)) : '';
+      const baseName = name ? cap(name) + ' | ' : '';
+      const nicheTxt = niche ? cap(niche) + ' • ' : '';
+      const kw = k.slice(0, 4).join(' • ');
+
+      switch (tone) {
+        case 'friendly':
+          return `${baseName}${nicheTxt}${k.slice(0,3).join(' • ')} • here to share tips & moments`;
+        case 'fun':
+          return `${baseName}🎉 ${nicheTxt}making mischief & memories. ${k.slice(0,2).join(' | ')}`;
+        case 'concise':
+          return `${baseName}${nicheTxt}${k.slice(0,3).join(' • ')}`;
+        case 'creative':
+          return `${baseName}${nicheTxt}crafting stories — ${k.slice(0,4).join(', ')}.`;
+        default:
+          // professional
+          return `${baseName}${nicheTxt}${kw} • Contact: DM / email`;
+      }
+    }
+
+    // Update UI elements
+    const keywordsEl = document.getElementById('keywords');
+    const outputEl = document.getElementById('output');
+    const lengthEl = document.getElementById('length');
+    const lengthValue = document.getElementById('lengthValue');
+    const charCount = document.getElementById('charCount');
+    const nameEl = document.getElementById('name');
+    const nicheEl = document.getElementById('niche');
+    const toneEl = document.getElementById('tone');
+
+    lengthEl && lengthEl.addEventListener('input', () => {
+      lengthValue.textContent = lengthEl.value + ' characters';
+    });
+
+    function generateBioMain() {
+      const name = nameEl.value.trim();
+      const niche = nicheEl.value.trim();
+      const keywords = splitKeywords(keywordsEl.value);
+      const tone = toneEl.value || 'professional';
+      const maxLen = (lengthEl && parseInt(lengthEl.value, 10)) || 140;
+
+      if (!keywords.length && !name && !niche) {
+        outputEl.value = 'Please enter a name, niche, or keywords to generate a bio.';
+        charCount.textContent = 0;
+        return;
+      }
+
+      const bioRaw = buildBio({ name, niche, keywords, tone });
+      let bio = sanitizeKeepEmoji(bioRaw);
+      if (bio.length > maxLen) bio = bio.slice(0, maxLen - 1) + '…';
+
+      outputEl.value = bio;
+      charCount.textContent = bio.length;
+
+      // lightweight analysis shown in console for now (could be added to UI)
+      const scored = scoreKeywords(keywords);
+      console.log('Keyword analysis:', scored);
+    }
+
+    async function copyBio() {
+      const text = outputEl.value || '';
+      if (!text) { alert('Nothing to copy — generate a bio first.'); return; }
+
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        try {
+          await navigator.clipboard.writeText(text);
+          alert('Bio copied to clipboard!');
+          return;
+        } catch (err) {
+          // fallback below
+        }
+      }
+
+      try {
+        outputEl.focus();
+        outputEl.select();
+        outputEl.setSelectionRange(0, outputEl.value.length);
+        const ok = document.execCommand('copy');
+        if (ok) { alert('Bio copied to clipboard!'); return; }
+      } catch (e) { /* continue to prompt fallback */ }
+
+      // Final fallback: prompt so user can long-press copy on mobile
+      prompt('Copy the bio below (long-press or Ctrl+C):', text);
+    }
+
+    function downloadBio() {
+      const text = outputEl.value || '';
+      const blob = new Blob([text], { type: 'text/plain' });
+      const a = document.createElement('a');
+      a.href = URL.createObjectURL(blob);
+      a.download = 'insta-bio.txt';
+      document.body.appendChild(a);
+      a.click();
+      a.remove();
+    }
+
+    function showPrivacy() {
+      const modal = document.getElementById('privacyModal');
+      modal.style.display = 'flex';
+    }
+    function closePrivacy() {
+      const modal = document.getElementById('privacyModal');
+      modal.style.display = 'none';
+    }
+
+    // Events
+    document.getElementById('generateBtn').addEventListener('click', generateBioMain);
+    document.getElementById('generateTop').addEventListener('click', generateBioMain);
+    document.getElementById('resetBtn').addEventListener('click', function() {
+      nameEl.value = ''; nicheEl.value = ''; keywordsEl.value = ''; toneEl.value = 'professional';
+      if (lengthEl) lengthEl.value = 140;
+      document.getElementById('lengthValue').textContent = '140 characters';
+      outputEl.value = 'Click Generate to create your bio — it will appear here.';
+      charCount.textContent = 0;
+    });
+    document.getElementById('copyBtn').addEventListener('click', copyBio);
+    document.getElementById('downloadBtn').addEventListener('click', downloadBio);
+    document.getElementById('privacyBtn').addEventListener('click', showPrivacy);
+    document.getElementById('privacyLink') && document.getElementById('privacyLink').addEventListener('click', function(e){ e.preventDefault(); showPrivacy(); });
+    document.getElementById('closeModal').addEventListener('click', closePrivacy);
+    document.getElementById('closePrivacy') && document.getElementById('closePrivacy').addEventListener('click', closePrivacy);
+
+    // Enter to generate (but allow shift+enter for new lines)
+    keywordsEl.addEventListener('keydown', function(e) {
+      if (e.key === 'Enter' && !e.shiftKey) {
+        e.preventDefault();
+        generateBioMain();
+      }
+    });
+
+    // Init
+    document.addEventListener('DOMContentLoaded', function() {
+      // set initial length text if present
+      if (lengthEl) document.getElementById('lengthValue').textContent = lengthEl.value + ' characters';
+    });
+  </script>
+</body>
+</html>
